@@ -1,0 +1,10 @@
+@import '../../themes/variable';
+
+.btn {
+    @include button($text-base, $text-base, $text-c1-dark, #EEE, 15px, none, 15px, #EEE, $text-c1-dark);
+}
+
+.btn-gradient {
+    @extend .btn;
+    background: linear-gradient(90deg, rgba(0, 206, 255, 1) 12%, rgba(6, 10, 210, 1) 99%);
+}
