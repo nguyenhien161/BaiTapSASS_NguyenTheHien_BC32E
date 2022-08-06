@@ -1,25 +1,19 @@
 @import '../../themes/variable';
 @import '../../base/components/component';
+@import '../../base/base';
 
-body {
-    background-image: url(./../../../img/yellow_top_wave_01.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: top bottom;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
 
 .header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+
     .container {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 80px;
 
         .logo {
             height: 80px;
@@ -61,22 +55,27 @@ body {
 
 .carousel {
     height: 100%;
-    background-image: url(../../../img/Violet_top_left_wave.png);
-    -webkit-box-reflect: below;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: bottom center;
     margin: 0;
     padding: 0;
+    z-index: 0;
+
+    .bg {
+        left: 0;
+        margin: 0;
+
+        img {
+            width: 100%;
+        }
+    }
 
     .container {
         height: 100%;
-        width: 100%;
 
         .content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            top: 0;
 
             .left {
                 .title {
@@ -96,6 +95,12 @@ body {
                     width: 100%;
                 }
             }
+        }
+    }
+
+    .bottom {
+        img {
+            -webkit-box-reflect: below;
         }
     }
 }
@@ -164,6 +169,7 @@ body {
 
 .service {
     margin-top: 80px;
+    padding: 80px 0;
     height: 630px;
     background-image: url(./../../../img/accent_bottom_wave_01.png);
     background-repeat: no-repeat;

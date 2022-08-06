@@ -45,11 +45,11 @@
   background: linear-gradient(90deg, rgb(0, 206, 255) 12%, rgb(6, 10, 210) 99%);
 }
 
-body {
-  background-image: url(./../../../img/yellow_top_wave_01.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top bottom;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 .container {
@@ -58,11 +58,17 @@ body {
   padding: 0 15px;
 }
 
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+}
 .header .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
 }
 .header .container .logo {
   height: 80px;
@@ -95,22 +101,25 @@ body {
 
 .carousel {
   height: 100%;
-  background-image: url(../../../img/Violet_top_left_wave.png);
-  -webkit-box-reflect: below;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: bottom center;
   margin: 0;
   padding: 0;
+  z-index: 0;
+}
+.carousel .bg {
+  left: 0;
+  margin: 0;
+}
+.carousel .bg img {
+  width: 100%;
 }
 .carousel .container {
   height: 100%;
-  width: 100%;
 }
 .carousel .container .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  top: 0;
 }
 .carousel .container .content .left .title {
   font-size: 16px;
@@ -123,6 +132,9 @@ body {
 }
 .carousel .container .content .right img {
   width: 100%;
+}
+.carousel .bottom img {
+  -webkit-box-reflect: below;
 }
 
 .feature-products {
@@ -187,6 +199,7 @@ body {
 
 .service {
   margin-top: 80px;
+  padding: 80px 0;
   height: 630px;
   background-image: url(./../../../img/accent_bottom_wave_01.png);
   background-repeat: no-repeat;
